@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>layui测试</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript"
+           src="../static/js/jquery/jquery.js"></script>
+    <script type="text/javascript"
+            src="../static/js/layui-v2.2.5/layui/layui.js"></script>
+    <link rel="stylesheet" href="../static/js/layui-v2.2.5/layui/css/layui.css"/>
+</head>
+<body>
+<button class="layui-btn layui-btn-warm"   id="add"> add</button>
+<!--<div class="layui-upload">
+    <button type="button" class="layui-btn" id="test1">上传图片</button>
+    <div class="layui-upload-list">
+        <img class="layui-upload-img" id="demo1">
+        <p id="demoText"></p>
+    </div>
+</div>-->
+</body>
+<script type="text/javascript">
+    $("#add").click(function() {
+        layui.use('layer', function () {
+            var layer = layui.layer;
+            layer.open({
+                type: 2,
+                title: "like me",
+                closeBtn: 0, //不显示关闭按钮
+                shade: [0],
+                shadeClose:true,
+                area: ['90%', '90%'],
+                offset: 'rb', //右下角弹出
+                content:'add'
+            })
+        })
+
+    })
+</script>
+</html>
